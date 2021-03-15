@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildCategoriesGrid(AsyncSnapshot<List<CategoriesModel>> categories) {
-    print('\n\n\n $categories.data');
+    // print('${categories.data[0].banner}');
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GridView.builder(
@@ -65,10 +65,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         SubCategoryScreen(categories: categories.data))),
             child: Card(
               child: GridTile(
-                child: Image.network(categories.data[index].banner,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) => Text(error.toString(), overflow: TextOverflow.ellipsis,),),
-                footer: Text(categories.data[index].category_name),
+                child: Image.network(
+                  categories.data[index].banner,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => Text(
+                    error.toString(),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                footer: Text(categories.data[index].categoryName),
               ),
             ),
           );

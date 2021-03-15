@@ -8,8 +8,11 @@ class ProductApiProvider {
   final _url =
       'https://interface.huviapp.co/api/v1/index.php/masterapi/get_products';
 
-  Future<List<ProductModel>> fetchProducts(int category_id, int sub_category_id) async {
-    final response = await client.get(Uri.parse('$_url?category=$category_id&sub_category=$sub_category_id'), );
+  Future<List<ProductModel>> fetchProducts(
+      int categoryId, int subCategoryId) async {
+    final response = await client.post(
+        Uri.parse(_url),
+        body: {'category': categoryId.toString()});
     print(response.body);
     if (response.statusCode == 200) {
       return (List<ProductModel>.from(json

@@ -2,7 +2,7 @@ import 'package:aiyo/bloc/inventory_bloc.dart';
 import 'package:aiyo/models/product_model.dart';
 import 'package:flutter/material.dart';
 
-class ProductScreen extends StatelessWidget {
+class ProductScreen extends StatefulWidget {
   final String categoryName;
   final int categoryId;
   final int subCategoryId;
@@ -10,16 +10,27 @@ class ProductScreen extends StatelessWidget {
   ProductScreen({this.categoryName, this.categoryId, this.subCategoryId});
 
   @override
+  _ProductScreenState createState() => _ProductScreenState();
+}
+
+class _ProductScreenState extends State<ProductScreen> {
+  @override
+  void initState() {
+    bloc.fetchAllProducts(widget.categoryId, widget.subCategoryId);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(categoryName),
+        title: Text(widget.categoryName),
       ),
       body: StreamBuilder(
-        stream: bloc.fetchAllProducts(categoryId, subCategoryId),
+        stream: bloc.allProducts,
         builder: (context, AsyncSnapshot<List<ProductModel>> snapshot) {
           if (snapshot.hasData) {
-            print('\n\n\n\nsnapshot.data');
+            print('\n\n\n\n${snapshot.data}');
             return Column(
               children: <Widget>[
                 Text(
@@ -28,7 +39,7 @@ class ProductScreen extends StatelessWidget {
                 ),
                 Card(
                     child: Image.network(
-                  snapshot.data[0].image_url,
+                  snapshot.data[0].imageUrl,
                   height: 250,
                   errorBuilder: (context, error, stackTrace) => Text(
                     error.toString(),

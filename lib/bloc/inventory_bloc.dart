@@ -18,8 +18,8 @@ class InventoryBloc {
     _categoriesFetcher.sink.add(categories);
   }
 
-  fetchAllProducts(int category_id, int sub_category_id) async {
-    List<ProductModel> products = await _repository.fetchAllProducts(category_id, sub_category_id);
+  fetchAllProducts(int categoryId, int subCategoryId) async {
+    List<ProductModel> products = await _repository.fetchAllProducts(categoryId, subCategoryId);
     _productsFetcher.sink.add(products);
   }
 

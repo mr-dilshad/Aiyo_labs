@@ -11,7 +11,7 @@ class InventoryRepository {
     return categoryApiProvider.fetchCatogories();
   }
 
-  Future<List<ProductModel>> fetchAllProducts(int category_id, int sub_category_id) {
-    return productApiProvider.fetchProducts(category_id, sub_category_id);
+  Future<List<ProductModel>> fetchAllProducts(int categoryId, int subCategoryId) {
+    return productApiProvider.fetchProducts(categoryId, subCategoryId);
   }
 }

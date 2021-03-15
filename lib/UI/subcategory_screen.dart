@@ -18,7 +18,7 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
         tabs: List.generate(
             widget.categories.length,
             (index) => Tab(
-                  text: widget.categories[index].category_name,
+                  text: widget.categories[index].categoryName,
                 )));
     return DefaultTabController(
       length: widget.categories.length,
@@ -37,33 +37,34 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
     );
   }
 
-  Widget _buildSubcategory(List<SubCategoryModel> sub_categories) {
+  Widget _buildSubcategory(List<SubCategoryModel> subCategories) {
+    print(subCategories[0].banner);
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: GridView.builder(
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-        itemCount: sub_categories.length,
+        itemCount: subCategories.length,
         itemBuilder: (context, index) => GestureDetector(
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (context) => ProductScreen(
-                        categoryId: sub_categories[index].category,
-                        subCategoryId: sub_categories[index].sub_category_id,
-                        categoryName: sub_categories[index].sub_category_name,
+                        categoryId: subCategories[index].category,
+                        subCategoryId: subCategories[index].subCategoryId,
+                        categoryName: subCategories[index].subCategoryName,
                       ))),
           child: Card(
             child: GridTile(
               child: Image.network(
-                sub_categories[index].banner,
+                subCategories[index].banner,
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) => Text(
                   error.toString(),
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              footer: Text(sub_categories[index].sub_category_name),
+              footer: Text(subCategories[index].subCategoryName),
             ),
           ),
         ),
