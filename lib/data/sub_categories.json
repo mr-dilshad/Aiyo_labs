@@ -1,0 +1,44 @@
+{
+    "success": 1,
+    "data": [
+        {
+            "sub_category_id": "5",
+            "sub_category_name": "especias y sazonadores",
+            "category": "1",
+            "banner": "Especias1.png",
+            "cutoff_from": "08:00:00",
+            "cutoff_to": "22:00:00",
+            "display_order": "0",
+            "status": "1",
+            "created_date": "2021-03-07 07:30:08",
+            "updated_date": "2021-03-11 13:25:26",
+            "expected_time": "10:00 PM"
+        },
+        {
+            "sub_category_id": "3",
+            "sub_category_name": "aceites y vinagres",
+            "category": "1",
+            "banner": "Aceites1.png",
+            "cutoff_from": "08:00:00",
+            "cutoff_to": "22:00:00",
+            "display_order": "0",
+            "status": "1",
+            "created_date": "2021-03-03 14:16:58",
+            "updated_date": "2021-03-11 13:25:11",
+            "expected_time": "10:00 PM"
+        },
+        {
+            "sub_category_id": "4",
+            "sub_category_name": "salsas y ali\u00f1os",
+            "category": "1",
+            "banner": "Salsas1.png",
+            "cutoff_from": "08:00:00",
+            "cutoff_to": "22:00:00",
+            "display_order": "0",
+            "status": "1",
+            "created_date": "2021-03-03 14:17:28",
+            "updated_date": "2021-03-11 13:25:19",
+            "expected_time": "10:00 PM"
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "success": 1,
+    "data": {
+        "product_id": "1602",
+        "title": "Carbonell 0,4 1L",
+        "product_variant": "1000ml",
+        "category": "1",
+        "short_description": null,
+        "description": "",
+        "sub_category": "3",
+        "num_of_imgs": "0",
+        "sale_price": "3.89",
+        "purchase_price": "0.00",
+        "shipping_cost": "0.00",
+        "add_timestamp": "2021-03-11 17:05:21",
+        "featured": null,
+        "tag1": null,
+        "tag2": null,
+        "status": "1",
+        "is_trending": "0",
+        "brand": "0",
+        "current_stock": "6",
+        "allowed_stock": "10",
+        "unit": "ml",
+        "discount": "0",
+        "discount_type": "percent",
+        "tax": "10",
+        "tax_type": null,
+        "deal": "0",
+        "deal_display_order": "0",
+        "created_time": "2021-03-09 08:02:13",
+        "update_time": "2021-03-11 17:05:21",
+        "products": null,
+        "is_bundle": null,
+        "display_order": "1",
+        "delivery_time1": null,
+        "delivery_time2": null,
+        "shelf": "A3PY",
+        "aisle": "100184",
+        "image_url": "product_0_1615273335_6234.",
+        "expected_time": null,
+        "product_variants_expected_time": null,
+        "product_variants_id": "1602",
+        "product_variants_option": "1000ml",
+        "product_variants_sale_price": "3.89",
+        "product_variants_purchase_price": "0.00",
+        "product_variants_discount": "0",
+        "product_variants_discount_type": "percent",
+        "product_variants_tax": "10",
+        "product_variants_tax_type": null,
+        "product_variants_num_of_imgs": "0",
+        "product_variants_cur_stock": "6",
+        "product_variants_unit": "ml",
+        "prod_imgs": [
+            "product_0_1615273335_6234."
+        ],
+        "new_product_variants": [
+            "1000ml"
+        ],
+        "new_product_variants_id": [
+            "1602"
+        ],
+        "new_product_variants_expected_time": "",
+        "new_product_variants_sale_price": [
+            4
+        ],
+        "new_product_variants_discount": [
+            "0"
+        ],
+        "new_product_variants_discount_type": [
+            "percent"
+        ],
+        "new_product_variants_tax": [
+            "10"
+        ],
+        "new_product_variants_num_of_imgs": [
+            "0"
+        ],
+        "new_product_variants_cur_stock": [
+            "6"
+        ],
+        "new_product_variants_unit": [
+            "ml"
+        ],
+        "new_product_variants_special_price": [
+            ""
+        ],
+        "new_product_variants_discount_text": [
+            ""
+        ]
+    }
+}
