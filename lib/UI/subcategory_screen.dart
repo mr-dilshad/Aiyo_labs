@@ -1,4 +1,4 @@
-import 'package:aiyo/UI/product_screen.dart';
+import 'package:emojis/emojis.dart';
 import 'package:aiyo/models/categories_model.dart';
 import 'package:flutter/material.dart';
 
@@ -46,29 +46,33 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
         itemCount: subCategories.length,
         itemBuilder: (context, index) => GestureDetector(
-          onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => ProductScreen(
-                        categoryId: subCategories[index].category,
-                        subCategoryId: subCategories[index].subCategoryId,
-                        categoryName: subCategories[index].subCategoryName,
-                      ))),
+          // onTap: () => Navigator.push(
+          //     context,
+          //     MaterialPageRoute(
+          //         builder: (context) => ProductScreen(
+          //               categoryId: subCategories[index].category,
+          //               subCategoryId: subCategories[index].subCategoryId,
+          //               categoryName: subCategories[index].subCategoryName,
+          //             ))),
+          onTap: () {},
           child: Card(
+            margin: EdgeInsets.all(8.0),
             child: GridTile(
               child: Image.network(
                 subCategories[index].banner,
                 fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) => Text(
-                  error.toString(),
-                  overflow: TextOverflow.ellipsis,
+                errorBuilder: (context, error, stackTrace) =>  Center(
+                    child: Text(
+                      Emojis.crossMark,
+                    ),
+                  ),
                 ),
+                footer: Text(subCategories[index].subCategoryName, overflow: TextOverflow.ellipsis,),
               ),
-              footer: Text(subCategories[index].subCategoryName),
+              
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

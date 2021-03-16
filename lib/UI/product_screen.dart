@@ -41,7 +41,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     child: Image.network(
                   snapshot.data[0].imageUrl,
                   height: 250,
-                  errorBuilder: (context, error, stackTrace) => Text(
+                  errorBuilder: (ctx, error, stackTrace) => Text(
                     error.toString(),
                     overflow: TextOverflow.ellipsis,
                   ),

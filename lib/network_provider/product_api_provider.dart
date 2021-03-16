@@ -5,14 +5,16 @@ import 'package:http/http.dart' show Client;
 class ProductApiProvider {
   Client client = Client();
   //paste your api endpoint here
-  final _url =
-      'https://interface.huviapp.co/api/v1/index.php/masterapi/get_products';
-
+  final _baseUrl = 'https://interface.huviapp.co';
+  final _path = '/api/v1/index.php/masterapi/get_products';
+  var map = new Map<String, dynamic>();
+  
   Future<List<ProductModel>> fetchProducts(
       int categoryId, int subCategoryId) async {
+    map['category'] = '1';
     final response = await client.post(
-        Uri.parse(_url),
-        body: {'category': categoryId.toString()});
+        '$_baseUrl$_path',
+        body: {'category': '1'});
     print(response.body);
     if (response.statusCode == 200) {
       return (List<ProductModel>.from(json
